@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { HeartIcon, Heart, LinkIcon, CalendarIcon } from 'lucide-react';
 import StockImg from '../../assets/stockimg.jpg';
 import { format } from 'date-fns';
-import userContext from '../../Context/UserContext';
+import userContext from '../../context/UserContext.jsx';
 
 const EventDetails = ({ events }) => {
   const [currentEvent, setCurrentEvent] = useState(events);

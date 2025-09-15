@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Select from 'react-select';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { toast } from 'react-toastify';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';

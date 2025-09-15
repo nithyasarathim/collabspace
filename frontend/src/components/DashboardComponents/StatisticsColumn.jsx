@@ -5,7 +5,7 @@ import {
   Trash, User, Plus, X
 } from 'lucide-react';
 import TaskList from './TaskList';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';

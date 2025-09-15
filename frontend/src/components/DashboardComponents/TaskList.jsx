@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Trash, Plus, X, Check, ListChecks } from 'lucide-react';
 import { toast } from 'react-toastify';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);

@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import DashboardHeader from '../../components/ProjectDashboardComponents/DashboardHeader';
 import Error403 from '../../pages/AuthPages/Error403Page';
 import { useParams } from 'react-router-dom';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const ProjectDashboard = () => {
   const { id } = useParams();

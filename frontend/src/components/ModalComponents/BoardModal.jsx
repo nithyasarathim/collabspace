@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { X } from 'lucide-react';
 
 const BoardModal = ({ setShowBoard, showAddProjectModal }) => {

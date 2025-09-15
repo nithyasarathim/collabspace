@@ -4,7 +4,7 @@ import {
   LayoutList, LayoutDashboard, RefreshCcwDot,CalendarSearch
 } from 'lucide-react';
 import Logo from '../assets/logo.png';
-import userContext from '../Context/UserContext';
+import userContext from '../context/UserContext.jsx';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Profile from '../assets/default.jpg';
 import { motion, AnimatePresence } from 'framer-motion';

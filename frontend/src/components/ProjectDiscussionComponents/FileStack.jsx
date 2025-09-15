@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FileImage, FileText, File, Download, Plus, X } from 'lucide-react';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { useContext } from 'react';
 import io from 'socket.io-client';
 

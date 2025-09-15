@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { toast } from 'react-toastify';
 import { Trash2 } from 'lucide-react';
 import 'react-toastify/dist/ReactToastify.css';

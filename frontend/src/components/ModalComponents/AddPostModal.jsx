@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
 import { X } from 'lucide-react';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const AddPostModal = ({ setShowAddPost, onPostCreated }) => {
     const { user } = useContext(UserContext);

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import AddTaskModal from '../ModalComponents/AddTaskModal';
 import { toast } from 'react-toastify';
 import Select from 'react-select';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 

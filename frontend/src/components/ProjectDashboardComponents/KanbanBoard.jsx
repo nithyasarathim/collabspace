@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { ChevronDown, Pencil, Trash } from 'lucide-react';
 import { motion } from 'framer-motion'; // keep only motion for modals
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const KanbanBoard = ({ data, onUpdateColumns }) => {
   const { user } = useContext(UserContext);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { X, Inbox, Send, Trash } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { toast } from 'react-toastify';
 
 const MailModal = ({ onClose }) => {

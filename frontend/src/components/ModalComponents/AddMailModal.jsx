@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Mail, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const AddMailModal = ({ setShowAddMail }) => {
   const [recipient, setRecipient] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Header from '../../components/Header';
 import ProjectDetailModal from '../../components/ModalComponents/ProjectDetailModal';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 
 const ExploreProjects = () => {
   const [selectedType, setSelectedType] = useState('');

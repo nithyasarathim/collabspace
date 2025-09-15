@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Users, Clock, Star, Group, UserCheck } from 'lucide-react';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import { toast } from 'react-toastify';
 
 const ProjectDetailModal = ({ project, onClose }) => {

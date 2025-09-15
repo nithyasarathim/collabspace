@@ -5,7 +5,7 @@ import MessageArea from '../../components/ProjectDiscussionComponents/MessageAre
 import Header from '../../components/Header.jsx';
 import DiscussStatistics from '../../components/ProjectDiscussionComponents/DiscussStatistics.jsx';
 import FileStack from '../../components/ProjectDiscussionComponents/FileStack.jsx';
-import UserContext from '../../Context/UserContext';
+import UserContext from '../../context/UserContext.jsx';
 import Error403 from '../../pages/AuthPages/Error403Page';
 
 const socket = io('https://server-2dc3.onrender.com');
