@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import jwtDecode from 'jwt-decode';
+import * as jwtDecode from 'jwt-decode'; // import everything
 import UserContext from './UserContext';
 
 const UserProvider = ({ children }) => {
@@ -9,7 +9,7 @@ const UserProvider = ({ children }) => {
     const token = localStorage.getItem('token');
     if (token) {
       try {
-        const decoded = jwtDecode(token);
+        const decoded = jwtDecode.default(token); // call default
         setUser(decoded);
       } catch (err) {
         console.error("Token decode failed:", err);
