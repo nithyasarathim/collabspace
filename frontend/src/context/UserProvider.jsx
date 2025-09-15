@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {jwtDecode} from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import UserContext from './UserContext';
 
 const UserProvider = ({ children }) => {
