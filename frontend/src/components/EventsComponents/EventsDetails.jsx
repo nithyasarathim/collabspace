@@ -2,12 +2,12 @@ import React, { useState, useEffect, useContext } from 'react';
 import { HeartIcon, Heart, LinkIcon, CalendarIcon } from 'lucide-react';
 import StockImg from '../../assets/stockimg.jpg';
 import { format } from 'date-fns';
-import userContext from '../../context/UserContext.jsx';
+import UserContext from '../../context/UserContext.jsx';
 
 const EventDetails = ({ events }) => {
   const [currentEvent, setCurrentEvent] = useState(events);
   const [isLiking, setIsLiking] = useState(false);
-  const { user } = useContext(userContext);
+  const { user } = useContext(UserContext);
   const userId = user?.id;
 
   useEffect(() => {

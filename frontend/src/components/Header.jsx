@@ -4,7 +4,7 @@ import {
   LayoutList, LayoutDashboard, RefreshCcwDot,CalendarSearch
 } from 'lucide-react';
 import Logo from '../assets/logo.png';
-import userContext from '../context/UserContext.jsx';
+import UserContext from '../context/UserContext.jsx';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Profile from '../assets/default.jpg';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -32,7 +32,7 @@ const sidePanelVariants = {
 };
 
 const Header = () => {
-  const { user } = useContext(userContext);
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
   const [isListOpen, setListOpen] = useState(false);
   const [isNotificationOpen, setNotificationOpen] = useState(false);
