@@ -19,7 +19,7 @@ const ProjectDashboard = () => {
     const fetchProject = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:8000/projects/${id}`);
+        const res = await fetch(`https://server-2dc3.onrender.com/projects/${id}`);
         
         if (!res.ok) {
           console.error('Failed to fetch project data');
@@ -50,7 +50,7 @@ const ProjectDashboard = () => {
 
   const updateTaskColumns = async (updatedColumns) => {
     try {
-      const response = await fetch(`http://localhost:8000/projects/${id}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/projects/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

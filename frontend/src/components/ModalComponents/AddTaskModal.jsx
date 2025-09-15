@@ -11,7 +11,7 @@ const AddTaskModal = ({ data, onClose, onAddTask, setShowAddTaskModal }) => {
 
   const addTaskToProject = async (projectId, taskData, column) => {
     try {
-      const response = await fetch(`http://localhost:8000/projects/${projectId}/add`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/projects/${projectId}/add`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ task: taskData, column }),

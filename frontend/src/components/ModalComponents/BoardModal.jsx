@@ -11,7 +11,7 @@ const BoardModal = ({ setShowBoard, showAddProjectModal }) => {
   const userId = user?.id || '';
 
   useEffect(() => {
-    fetch('http://localhost:8000/projects/my-projects', {
+    fetch('https://server-2dc3.onrender.com/projects/my-projects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user: userId }),

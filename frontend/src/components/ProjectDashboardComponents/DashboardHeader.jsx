@@ -56,7 +56,7 @@ const DashboardHeader = ({ data, setRefresh, refresh }) => {
     };
 
     try {
-      await fetch(`http://localhost:8000/projects/info/${data._id}`, {
+      await fetch(`https://server-2dc3.onrender.com/projects/info/${data._id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

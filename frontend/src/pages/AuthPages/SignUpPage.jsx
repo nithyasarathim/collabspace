@@ -35,7 +35,7 @@ const SignUpPage = () => {
     setError(""); 
   };
   
-  const API_URL ="http://localhost:8000";
+  const API_URL ="https://server-2dc3.onrender.com";
 
   const handleSignUp = async () => {
     if (!department) {

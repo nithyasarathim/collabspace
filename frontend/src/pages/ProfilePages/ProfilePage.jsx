@@ -38,12 +38,12 @@ const ProfilePage = () => {
       try {
         setLoading(true);
         
-        const userResponse = await fetch(`http://localhost:8000/users/${id}`);
+        const userResponse = await fetch(`https://server-2dc3.onrender.com/users/${id}`);
         if (!userResponse.ok) throw new Error('Failed to fetch user data');
         const userData = await userResponse.json();
         setUser(userData);
 
-        const projectsResponse = await fetch('http://localhost:8000/projects/my-projects', {
+        const projectsResponse = await fetch('https://server-2dc3.onrender.com/projects/my-projects', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ user: id })

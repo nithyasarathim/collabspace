@@ -13,12 +13,12 @@ const MailModal = ({ onClose }) => {
 
   const fetchEmails = async () => {
     try {
-      const inboxRes = await fetch('http://localhost:8000/mail/inbox', {
+      const inboxRes = await fetch('https://server-2dc3.onrender.com/mail/inbox', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email }),
       });
-      const outboxRes = await fetch('http://localhost:8000/mail/outbox', {
+      const outboxRes = await fetch('https://server-2dc3.onrender.com/mail/outbox', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email }),
@@ -51,7 +51,7 @@ const MailModal = ({ onClose }) => {
 
     if (view === 'inbox' && !email.status) {
       try {
-        await fetch('http://localhost:8000/mail/read', {
+        await fetch('https://server-2dc3.onrender.com/mail/read', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id: email._id, email: user.email }),
@@ -66,7 +66,7 @@ const MailModal = ({ onClose }) => {
 
   const handleDelete = async (emailId) => {
     try {
-      await fetch('http://localhost:8000/mail/delete', {
+      await fetch('https://server-2dc3.onrender.com/mail/delete', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ emailId, email: user.email, view }), 

@@ -132,7 +132,7 @@ const AddProjectModal = ({ setShowAddProjectModal }) => {
     };    
 
     try {
-      const response = await fetch('http://localhost:8000/projects/project-create', {
+      const response = await fetch('https://server-2dc3.onrender.com/projects/project-create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

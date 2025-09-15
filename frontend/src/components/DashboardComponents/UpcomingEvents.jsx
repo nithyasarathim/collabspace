@@ -11,7 +11,7 @@ const UpcomingEvents = () => {
   useEffect(() => {
     const fetchevents = async () => {
       try {
-        const response = await fetch("http://localhost:8000/events/get");
+        const response = await fetch("https://server-2dc3.onrender.com/events/get");
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         setevents(data);
@@ -76,7 +76,7 @@ const UpcomingEvents = () => {
                   <img
                     src={
                       event.image
-                        ? `http://localhost:8000/${event.image}`
+                        ? `https://server-2dc3.onrender.com/${event.image}`
                         : TestImg
                     }
                     alt="event"

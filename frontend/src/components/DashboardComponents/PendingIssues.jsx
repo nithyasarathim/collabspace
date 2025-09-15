@@ -17,7 +17,7 @@ const PendingIssues = () => {
   useEffect(() => {
     if (!userId) return;
 
-    fetch('http://localhost:8000/projects/my-projects', {
+    fetch('https://server-2dc3.onrender.com/projects/my-projects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user: userId }),

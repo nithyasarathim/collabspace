@@ -18,7 +18,7 @@ const ForgotPwd = ({ setOtpStatus }) => {
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:8000/auth/generate-otp', {
+            const response = await fetch('https://server-2dc3.onrender.com/auth/generate-otp', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),

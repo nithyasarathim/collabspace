@@ -43,7 +43,7 @@ const Header = () => {
 
   const fetchNotifications = () => {
     if (!userId) return;
-    fetch(`http://localhost:8000/notify/${userId}`)
+    fetch(`https://server-2dc3.onrender.com/notify/${userId}`)
       .then(res => res.json())
       .then(data => {
         const sorted = (data || []).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
@@ -53,7 +53,7 @@ const Header = () => {
   };
 
   const handleAccept = (note) => {
-    fetch(`http://localhost:8000/notify/accept`, {
+    fetch(`https://server-2dc3.onrender.com/notify/accept`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -78,7 +78,7 @@ const Header = () => {
   };
 
   const handleReject = (note) => {
-    fetch(`http://localhost:8000/notify/reject`, {
+    fetch(`https://server-2dc3.onrender.com/notify/reject`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ notificationId: note._id, userId: userId }),

@@ -12,7 +12,7 @@
         const [error, setError] = useState('');
         const [success, setSuccess] = useState('');
 
-        const API_URL = 'http://localhost:8000';
+        const API_URL = 'https://server-2dc3.onrender.com';
 
         const doLogin = async (event) => {
             localStorage.clear();

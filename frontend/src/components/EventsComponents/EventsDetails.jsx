@@ -27,7 +27,7 @@ const EventDetails = ({ events }) => {
     setIsLiking(true);
     try {
       const endpoint = hasLiked ? 'unlike' : 'like';
-      const response = await fetch(`http://localhost:8000/events/${endpoint}/${currentEvent._id}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/events/${endpoint}/${currentEvent._id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId })
@@ -63,7 +63,7 @@ const EventDetails = ({ events }) => {
       {/* Image Section */}
       <div className="w-full md:w-[35%] h-[525px] relative rounded-lg shadow-md overflow-hidden">
         <img
-          src={currentEvent.image ? `http://localhost:8000/${currentEvent.image}` : StockImg}
+          src={currentEvent.image ? `https://server-2dc3.onrender.com/${currentEvent.image}` : StockImg}
           alt="background blur"
           className="absolute inset-0 w-full h-full object-cover blur-sm scale-110"
           onError={(e) => {
@@ -72,7 +72,7 @@ const EventDetails = ({ events }) => {
         />
         <div className="relative z-10 flex items-center justify-center w-full h-full">
           <img
-            src={currentEvent.image ? `http://localhost:8000/${currentEvent.image}` : StockImg}
+            src={currentEvent.image ? `https://server-2dc3.onrender.com/${currentEvent.image}` : StockImg}
             alt="events cover"
             className="max-w-full max-h-full object-contain"
             onError={(e) => {

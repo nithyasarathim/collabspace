@@ -41,7 +41,7 @@ const EventList = ({ events, setSelectedEvent, filterCategory, setFilterCategory
                 onClick={() => handleEventClick(event)}
               >
                 <img
-                  src={event.image ? `http://localhost:8000/${event.image}` : TestImg}
+                  src={event.image ? `https://server-2dc3.onrender.com/${event.image}` : TestImg}
                   alt='event'
                   className='w-14 h-14 rounded-md object-cover'
                   onError={(e) => {

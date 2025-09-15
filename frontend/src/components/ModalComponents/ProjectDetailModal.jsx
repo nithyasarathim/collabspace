@@ -36,7 +36,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
     };
     
     try {
-      const response = await fetch('http://localhost:8000/notify/request', {
+      const response = await fetch('https://server-2dc3.onrender.com/notify/request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

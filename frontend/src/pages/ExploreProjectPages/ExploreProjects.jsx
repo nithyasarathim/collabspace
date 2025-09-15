@@ -28,7 +28,7 @@ const ExploreProjects = () => {
     const fetchProjects = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8000/projects/explore', {
+        const response = await fetch('https://server-2dc3.onrender.com/projects/explore', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

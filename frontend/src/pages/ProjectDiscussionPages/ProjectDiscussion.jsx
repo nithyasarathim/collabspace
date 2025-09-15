@@ -8,7 +8,7 @@ import FileStack from '../../components/ProjectDiscussionComponents/FileStack.js
 import UserContext from '../../Context/UserContext';
 import Error403 from '../../pages/AuthPages/Error403Page';
 
-const socket = io('http://localhost:8000');
+const socket = io('https://server-2dc3.onrender.com');
 
 const ProjectDiscussion = () => {
   const { id: projectID } = useParams();
@@ -22,7 +22,7 @@ const ProjectDiscussion = () => {
     const fetchProject = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:8000/projects/${projectID}`);
+        const res = await fetch(`https://server-2dc3.onrender.com/projects/${projectID}`);
         if (!res.ok) {
           console.error('Failed to fetch project data');
           setHasAccess(false);
@@ -55,7 +55,7 @@ const ProjectDiscussion = () => {
 
     const fetchMessages = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/messages/${projectID}`);
+        const res = await fetch(`https://server-2dc3.onrender.com/messages/${projectID}`);
         const data = await res.json();
         setMessages(data.data || []);
       } catch (err) {
@@ -87,7 +87,7 @@ const ProjectDiscussion = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/messages/send', {
+      const res = await fetch('https://server-2dc3.onrender.com/messages/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

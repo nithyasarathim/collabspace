@@ -62,7 +62,7 @@ const AddPostModal = ({ setShowAddPost, onPostCreated }) => {
             formDataToSend.append('link', formData.link || '');
             formDataToSend.append('image', imageFile);
 
-            const response = await fetch('http://localhost:8000/events/create', {
+            const response = await fetch('https://server-2dc3.onrender.com/events/create', {
                 method: 'POST',
                 body: formDataToSend
             });

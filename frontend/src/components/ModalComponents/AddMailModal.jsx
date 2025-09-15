@@ -14,7 +14,7 @@ const AddMailModal = ({ setShowAddMail }) => {
   const [successMessage, setSuccessMessage] = useState('');
   const { user } = useContext(UserContext);
   useEffect(() => {
-    fetch('http://localhost:8000/auth/emails')
+    fetch('https://server-2dc3.onrender.com/auth/emails')
       .then(res => res.json())
       .then(data => setAllEmails(data))
       .catch(err => console.error('Error fetching emails:', err));
@@ -31,7 +31,7 @@ const AddMailModal = ({ setShowAddMail }) => {
     const to = recipient;
 
     setSending(true);
-    fetch('http://localhost:8000/mail/send', {
+    fetch('https://server-2dc3.onrender.com/mail/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ from, to, subject, message }),

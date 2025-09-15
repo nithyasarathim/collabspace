@@ -25,7 +25,7 @@ const ProjectsList = ({ showAddProjectModal }) => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8000/projects/my-projects', {
+    fetch('https://server-2dc3.onrender.com/projects/my-projects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user: Id }),
@@ -48,7 +48,7 @@ const ProjectsList = ({ showAddProjectModal }) => {
   const confirmDelete = async () => {
     setIsDeleting(true);
     try {
-      const res = await fetch(`http://localhost:8000/projects/delete/${projectToDelete}`, {
+      const res = await fetch(`https://server-2dc3.onrender.com/projects/delete/${projectToDelete}`, {
         method: 'DELETE',
       });
       if (res.ok) {

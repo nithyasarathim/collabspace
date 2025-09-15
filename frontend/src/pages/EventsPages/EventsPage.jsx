@@ -11,7 +11,7 @@ const EventsPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:8000/events/get')
+    fetch('https://server-2dc3.onrender.com/events/get')
       .then(res => res.json())
       .then(data => setEvents(data))
       .catch(err => console.error(err));
@@ -19,7 +19,7 @@ const EventsPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:8000/events/get/${id}`)
+      fetch(`https://server-2dc3.onrender.com/events/get/${id}`)
         .then(res => res.json())
         .then(data => setSelectedEvent(data))
         .catch(err => console.error(err));

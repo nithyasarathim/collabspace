@@ -24,7 +24,7 @@ const TaskList = () => {
   const fetchTasks = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`);
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch tasks');
       }
@@ -51,7 +51,7 @@ const TaskList = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const TaskList = () => {
 
   const handleTaskToggle = async (taskId, currentStatus) => {
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const TaskList = () => {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

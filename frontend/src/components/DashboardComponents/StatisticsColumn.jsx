@@ -40,7 +40,7 @@ const StatisticsColumn = ({
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch('http://localhost:8000/mail/inbox', {
+    fetch('https://server-2dc3.onrender.com/mail/inbox', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: user.email }),
@@ -56,7 +56,7 @@ const StatisticsColumn = ({
   useEffect(() => {
     if (!userId) return;
 
-    fetch('http://localhost:8000/projects/my-projects', {
+    fetch('https://server-2dc3.onrender.com/projects/my-projects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user: userId }),
@@ -95,7 +95,7 @@ const StatisticsColumn = ({
   const fetchTasks = async () => {
     try {
       setLoadingTasks(true);
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`);
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch tasks');
       }
@@ -117,7 +117,7 @@ const StatisticsColumn = ({
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ const StatisticsColumn = ({
 
   const handleTaskToggle = async (taskId, currentStatus) => {
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ const StatisticsColumn = ({
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:8000/users/tasks/${userId}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/users/tasks/${userId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

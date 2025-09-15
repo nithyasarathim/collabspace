@@ -51,6 +51,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors('*'));
 
 app.use(express.static('public'));
+app.use('/',console.log('Server is running...'));
 app.use('/auth', authRoutes);
 app.use('/files', fileRoutes);
 app.use('/projects', projectRoutes);

@@ -20,7 +20,7 @@ const FileStacks = ({ projectID }) => {
   const currentUserName = user?.username;
 
   useEffect(() => {
-    const newSocket = io('http://localhost:8000');
+    const newSocket = io('https://server-2dc3.onrender.com');
     setSocket(newSocket);
 
     return () => {
@@ -51,7 +51,7 @@ const FileStacks = ({ projectID }) => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/files/project/${projectID}`);
+        const response = await fetch(`https://server-2dc3.onrender.com/files/project/${projectID}`);
         if (!response.ok) throw new Error('Failed to fetch files');
         const data = await response.json();
         setFiles(data);
@@ -65,7 +65,7 @@ const FileStacks = ({ projectID }) => {
 
   const handleDownload = async (fileId) => {
     try {
-      window.open(`http://localhost:8000/files/download/${fileId}`, '_blank');
+      window.open(`https://server-2dc3.onrender.com/files/download/${fileId}`, '_blank');
     } catch (error) {
       console.error('Download error:', error);
     }
@@ -80,7 +80,7 @@ const FileStacks = ({ projectID }) => {
     if (!fileToDelete) return;
     
     try {
-      const response = await fetch(`http://localhost:8000/files/delete/${fileToDelete}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/files/delete/${fileToDelete}`, {
         method: 'DELETE'
       });
       if (!response.ok) throw new Error('Delete failed');
@@ -152,7 +152,7 @@ const FileStacks = ({ projectID }) => {
     try {
       setUploadStatus('uploading');
   
-      const response = await fetch(`http://localhost:8000/files/upload/${projectID}`, {
+      const response = await fetch(`https://server-2dc3.onrender.com/files/upload/${projectID}`, {
         method: 'POST',
         body: formData,
       });
