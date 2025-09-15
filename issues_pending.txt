@@ -1,0 +1,6 @@
+1 ) Login - password size < 8 results bad request.
+3 ) Socketize all.
+5 ) Category update in the digest.
+6 ) Header authentication in every API's.
+8 ) Category update in project. 
+10) For empty profile- page fillers should be added
