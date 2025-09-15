@@ -13,7 +13,7 @@ import ExploreProjects from './pages/ExploreProjectPages/ExploreProjects.jsx';
 import ProjectsDashboard from './pages/ProjectDashboardPages/ProjectDashboard';
 import ProjectDiscussion from './pages/ProjectDiscussionPages/ProjectDiscussion';
 import Projects from './pages/ProjectDashboardPages/Projects.jsx';
-import UserContext from './context/UserContext.js';
+import UserContext from './context/UserContext.jsx';
 import { ToastContainer, Bounce } from 'react-toastify';
 import AccountDetailsPage from './pages/ProfilePages/ProfilePage.jsx';
 
